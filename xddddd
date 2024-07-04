@@ -1,0 +1,54 @@
+import csv
+estudiantes ={}
+#Notas me fue mal jeje :D  ODIOMIVIDA
+def calcular_n_presentacion(n1,n2,n3,n4):
+    return n1*0.3 + n2*0.3+n3*0.3+n4*0.1
+def calcular_n_final(n_examen):
+    return calcular_n_presentacion * 0.6 + n_examen * 0.4    
+def aprobados(n_final):
+    return n_final >= 4
+#estudiantes
+def agregar_estudiantes(estudiante,rut,n1,n2,n3,n4,):
+    n_presentacion=calcular_n_presentacion(float(n1)),(float(n2)),(float(n3))(float(n4)) n_final= calcular_n_final(n_presentacion,float(n4))
+    estudiantes.append({
+        "rut":rut,
+        "nombre":estudiante
+        "n1":float(n1)
+        "n2":float(n2)
+        "n3":float(n3)
+        "n4":float(n4)
+        "Nota presentacion":n_presentacion
+        "nota final":n_final
+        "Estado ": "aprobado" if aprobados(n_final) else "reprobado"
+    })
+def mostrar_estudiantes(estudiantes):
+ for estudiante in estudiantes:
+  print(f"Nombre :{[estudiante]} Rut : {[rut]} notas : {[n1,n2,n3,n4]} ")
+
+    
+def exportar_csv():
+    with open("nuevo_archivo.csv","w", newline="") as libro_de_notas:
+    escritor_csv = csv.writer(libro_de_notas.csv)
+    escritor_csv.writerow(["Estudiante", "rut", "Promedio ", "Estado"])
+    escritor_csv.writerow([
+    "Esteban", 25, "Santiago",
+    "Maria", 34, "Quinta normal",
+    "Carlos", 23, "Santa Ana",
+    ])
+with open("libro_de_notas.csv", "r", newline="") as archivo_csv:
+    lector_csv = csv.reader(archivo_csv) 
+    for fila in lector_csv:
+        print(fila)
+
+
+
+while True:
+    
+    print("\n1- Registrar al estudiante")
+    print("2- Ver todos los estudiantes")
+    print("3- Buscar estudiantes por rut")
+    print("4- Exportar csv")
+    
+    if opcion =="1"
+    estudiantes=mostrar_estudiantes
+    estudiantes.append        
